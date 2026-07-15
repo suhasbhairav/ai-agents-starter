@@ -1,101 +1,103 @@
-# AI Agents Starter Template for Next.js
+# AI Agents Starter
 
 ![Next.js](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js)
 ![React](https://img.shields.io/badge/React-19-149eca?style=for-the-badge&logo=react&logoColor=white)
-![OpenAI](https://img.shields.io/badge/OpenAI-Agents_SDK-412991?style=for-the-badge&logo=openai&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-38bdf8?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![OpenAI Agents SDK](https://img.shields.io/badge/OpenAI-Agents_SDK-412991?style=for-the-badge&logo=openai&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-Only-f7df1e?style=for-the-badge&logo=javascript&logoColor=111)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-38bdf8?style=for-the-badge&logo=tailwindcss&logoColor=white)
 
-**A focused multi-agent AI workflow starter for building prompt analysis and research pipelines with Next.js and the OpenAI Agents SDK.**
+**A Next.js OpenAI Agents SDK starter with a Prompt Analyzer Agent, Research Agent, server-side workflow route, and mobile-responsive agent workbench UI.**
 
-Created by **[Suhas Bhairav](https://suhasbhairav.com)**.
+Built by **[Suhas Bhairav](https://suhasbhairav.com)** as part of the **[AI Templates Marketplace](https://suhasbhairav.com/ai-templates)**.
 
-> This template shows a real agentic application flow: one agent improves the prompt, another agent uses that transformed brief to produce a researched response.
+> Enterprise-grade starter template for teams that want a working AI application surface, server-side API isolation, responsive UX, and a clear path from prototype to production.
 
-## 🚀 Template Preview
+## Template Links
 
-| Category | Details |
+| Destination | URL |
 | --- | --- |
-| **Template type** | Multi-agent workflow / AI agents starter / research assistant |
-| **Framework** | Next.js App Router |
-| **Language** | JavaScript |
-| **AI capability** | Prompt analyzer agent plus research agent |
-| **SDK** | `@openai/agents` |
-| **Best for** | AI template marketplaces, research assistants, agent demos, SaaS starters, workflow prototypes |
+| AI Templates Hub | [https://suhasbhairav.com/ai-templates](https://suhasbhairav.com/ai-templates) |
+| This Template Page | [https://suhasbhairav.com/ai-templates/ai-agents-starter](https://suhasbhairav.com/ai-templates/ai-agents-starter) |
+| Creator | [https://suhasbhairav.com](https://suhasbhairav.com) |
 
-## ✨ Feature Chips
+## One-Click Deploy
 
-`AI Agents` · `OpenAI Agents SDK` · `Next.js AI Template` · `Prompt Analyzer` · `Research Agent` · `Agent Pipeline` · `JavaScript Only` · `Tailwind CSS` · `API Route` · `AI SaaS Starter`
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fsuhasbhairav%2Fai-agents-starter&env=OPENAI_API_KEY%2COPENAI_AGENT_MODEL&envDescription=Add+the+server-side+API+keys+required+by+this+template.+These+values+are+stored+as+deployment+environment+variables+and+are+not+committed+to+the+repository.&envLink=https%3A%2F%2Fgithub.com%2Fsuhasbhairav%2Fai-agents-starter%23environment-variables)
 
-## 🔎 Template Overview
+Use the button above to clone and deploy this template directly from GitHub. The deploy flow will ask for `OPENAI_API_KEY`, `OPENAI_AGENT_MODEL` as production environment variables before the app goes live.
 
-This **AI Agents Starter Template** is a simple, working Next.js application that demonstrates how to build a two-agent workflow with the OpenAI Agents SDK.
+## Executive Overview
 
-The flow is intentionally easy to inspect:
+AI Agents Starter is designed for builders who need more than a static UI kit. It provides a concrete application pattern with a Next.js frontend, server-side API route, environment-driven provider configuration, and a responsive interface that can be adapted into a SaaS product, internal workflow, customer-facing assistant, or AI operations tool.
 
-1. A user enters any prompt.
-2. The Prompt Analyzer Agent transforms it into a focused research brief.
-3. The Research Agent receives the transformed brief.
-4. The app displays both the intermediate agent output and final answer.
+This template is intentionally structured so product teams can evaluate the interaction model quickly, then harden the implementation with authentication, persistence, monitoring, rate limits, and organization-specific business logic.
 
-## 🧠 What This Template Does
+## Best-Fit Use Cases
 
-- Runs a server-side OpenAI Agents SDK workflow.
-- Defines reusable agents in `lib/agents/workflow.js`.
-- Exposes the workflow through `app/api/agents/chat/route.js`.
-- Shows the transformed prompt and final research answer in the UI.
-- Includes example prompts for quick demos.
-- Keeps the OpenAI API key server-side.
-- Uses a clean, mobile-responsive interface.
-- Uses JavaScript only.
+- AI research assistant
+- Multi-agent workflow demo
+- Prompt transformation app
+- Agentic SaaS prototype
+- OpenAI Agents SDK starter
 
-## 🏗️ Architecture
+## Capability Map
+
+- Prompt Analyzer Agent
+- Research Agent
+- Sequential agent workflow
+- Server-side API route
+- Workflow inspection UI
+
+## Search And Discovery Keywords
+
+`AI templates` · `AI template` · `AI starter template` · `AI starter templates` · `AI starter kit` · `AI starter kits` · `AI app starter` · `AI app starters` · `AI app templates` · `AI web app templates` · `AI application templates` · `AI boilerplate` · `AI template marketplace` · `AI templates marketplace` · `free AI template` · `free AI templates` · `free AI starter template` · `free AI starter templates`
+
+## Architecture
 
 ```text
-User Prompt
-    ↓
-Next.js UI
-    ↓
+Browser UI
+   ↓
+Next.js App Router page
+   ↓
 POST /api/agents/chat
-    ↓
-Prompt Analyzer Agent
-    ↓
-Transformed Research Brief
-    ↓
-Research Agent
-    ↓
-Final Answer
+   ↓
+Server-side provider call
+   ↓
+Structured response
+   ↓
+Responsive result surface
 ```
 
-## 📁 Project Structure
+## Project Structure
 
-```text
-app/
-  api/
-    agents/
-      chat/
-        route.js
-  globals.css
-  layout.js
-  page.js
-lib/
-  agents/
-    workflow.js
+- `app/page.js`
+- `app/layout.js`
+- `app/globals.css`
+- `lib`
+- `app/api`
+
+## API Surface
+
+| Route | Purpose |
+| --- | --- |
+| `/api/agents/chat` | Runs the server-side agent workflow. |
+
+## Output Contract
+
+```json
+{
+  "message": "Assistant response",
+  "model": "provider-model",
+  "metadata": {}
+}
 ```
 
-## ⚡ Quick Start
+## Quick Start
 
 ```bash
 cp .env.example .env.local
 npm install
 npm run dev
-```
-
-Add your OpenAI API key to `.env.local`:
-
-```bash
-OPENAI_API_KEY=sk-proj-your-key-here
-OPENAI_AGENT_MODEL=gpt-5.6-terra
 ```
 
 Open the app:
@@ -104,107 +106,68 @@ Open the app:
 http://localhost:3000
 ```
 
-If port `3000` is already in use:
+If port 3000 is already in use:
 
 ```bash
-npm run dev -- -p 3002
+npm run dev -- -p 3001
 ```
 
-## 🔐 Environment Variables
+## Environment Variables
 
 | Variable | Required | Description |
 | --- | --- | --- |
-| `OPENAI_API_KEY` | Yes | Used by the Agents SDK to call OpenAI. |
-| `OPENAI_AGENT_MODEL` | No | Model used by both agents. Defaults to `gpt-5.6-terra`. |
+| `OPENAI_API_KEY` | Yes | Used server-side to call OpenAI. |
+| `OPENAI_AGENT_MODEL` | No | Optional model override for the AI route. |
 
-## 🧪 API Route
+## Implementation Notes
 
-### `POST /api/agents/chat`
+- Keep all provider API keys inside server-only routes.
+- Treat the UI as a product workbench, not a throwaway demo screen.
+- Add durable storage only after the core workflow is validated.
+- Keep prompts, model choices, and tool calls auditable.
+- Add explicit human escalation for high-risk or high-value workflows.
 
-Runs the full two-agent workflow.
+## Production Hardening Checklist
 
-Request body:
+| Area | Recommended Upgrade |
+| --- | --- |
+| Authentication | Add Clerk, Auth.js, Supabase Auth, or your identity provider. |
+| Authorization | Scope data and actions by user, team, tenant, or workspace. |
+| Persistence | Store conversations, runs, documents, or generated assets in a database. |
+| Observability | Add structured logs, traces, latency metrics, and error capture. |
+| Cost Controls | Add request quotas, model allowlists, token budgets, and abuse monitoring. |
+| Safety | Add input validation, output review, and domain-specific guardrails. |
+| Deployment | Configure production environment variables in Vercel or your hosting platform. |
 
-```json
-{
-  "prompt": "Research the market opportunity for an AI templates marketplace."
-}
-```
+## Security Notes
 
-Response:
+- Never expose provider keys in browser components.
+- Do not commit `.env.local`.
+- Validate request bodies before calling model APIs.
+- Add rate limits before allowing public traffic.
+- Review logs for sensitive data before storing prompts or responses.
 
-```json
-{
-  "originalPrompt": "...",
-  "transformedPrompt": "...",
-  "finalAnswer": "...",
-  "agents": [
-    {
-      "name": "Prompt Analyzer Agent",
-      "role": "Prompt transformation",
-      "output": "..."
-    },
-    {
-      "name": "Research Agent",
-      "role": "Research response",
-      "output": "..."
-    }
-  ],
-  "model": "gpt-5.6-terra"
-}
-```
+## Extension Ideas
 
-## 🧩 Why This Is Useful for an AI Templates Marketplace
+- Add streaming responses.
+- Add durable run history.
+- Add workspace-level settings.
+- Add file upload or retrieval where appropriate.
+- Add structured JSON output schemas.
+- Add evaluation fixtures for critical user journeys.
 
-Most app templates show static UI. This template shows a working agentic workflow that users can run immediately and extend into a real product.
+## Internal Marketplace Links
 
-It is intentionally scoped to a clear two-agent flow, which makes it ideal for learning, demos, and starter products.
+- [AI Templates Hub](https://suhasbhairav.com/ai-templates)
+- [This Template Page](https://suhasbhairav.com/ai-templates/ai-agents-starter)
 
-## 🛠️ Tech Stack
-
-- **Next.js App Router** for UI and API routes.
-- **React 19** for the interactive agent workbench.
-- **Tailwind CSS 4** for responsive styling.
-- **OpenAI Agents SDK** for agent definitions and runs.
-- **Zod** as the companion validation dependency used by the Agents SDK ecosystem.
-- **JavaScript only** for fast editing and broad adoption.
-
-## 📌 Current Scope
-
-Included:
-
-- Prompt Analyzer Agent
-- Research Agent
-- Sequential agent workflow
-- Server-side API route
-- Mobile-responsive UI
-- Example prompts
-- Creator attribution
-
-Recommended production upgrades:
-
-- Add persistent run history.
-- Add streaming progress events.
-- Add agent tracing links.
-- Add hosted tools such as web search or file search.
-- Add authentication and usage tracking.
-- Add structured output schemas for stricter downstream automation.
-
-## ✅ Verification
+## Verification
 
 ```bash
 npm run lint
 npm run build
 ```
 
-Both commands should pass after setup.
+## License
 
-## 👤 Creator
-
-Built by **Suhas Bhairav**.
-
-🌐 Website: **[suhasbhairav.com](https://suhasbhairav.com)**
-
-## 📄 License
-
-This project is licensed under the **MIT License**. See [LICENSE](./LICENSE).
+MIT. Use this starter freely, adapt it for your product, and keep the creator attribution where appropriate.
